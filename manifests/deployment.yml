@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: prathyushamdevfilesamplejavaspringbootbasic 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prathyushamdevfilesamplejavaspringbootbasic
+  template:
+    metadata:
+      labels:
+        app: prathyushamdevfilesamplejavaspringbootbasic 
+    spec:
+      containers:
+        - name: prathyushamdevfilesamplejavaspringbootbasic 
+          image: cscr1.azurecr.io/prathyushamdevfilesamplejavaspringbootbasic
+          ports:
+          - containerPort: 8081
